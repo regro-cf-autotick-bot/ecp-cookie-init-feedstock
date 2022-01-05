@@ -1,5 +1,5 @@
 {% set name = "ecp-cookie-init" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ecp-cookie-init-{{ version }}.tar.gz
-  sha256: f72c26e69d7bf0325bb35f466a965ba88939504aac4dc25e0ff95d1b507cbd6e
+  sha256: fe7d364aab1f857b57ab10e84ef494e799a01d24e64734bff7a67de4e94969e7
 
 build:
   number: 0
