@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ecp-cookie-init-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ecp-cookie-init-{{ version }}.tar.gz
   sha256: fe7d364aab1f857b57ab10e84ef494e799a01d24e64734bff7a67de4e94969e7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ecp-cookie-init = ecp_cookie_init:ecp_cookie_init
@@ -20,14 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools >=30.3.0
     # automagic manpage generation
     - argparse-manpage
     - ciecplib
   run:
     - ciecplib
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -40,6 +40,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://wiki.ligo.org/AuthProject
